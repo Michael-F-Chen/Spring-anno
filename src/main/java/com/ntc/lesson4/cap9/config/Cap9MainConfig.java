@@ -11,7 +11,8 @@ import com.ntc.lesson4.cap9.dao.TestDao;
 @ComponentScan({
 	"com.ntc.lesson4.cap9.controller",
 	"com.ntc.lesson4.cap9.service",
-	"com.ntc.lesson4.cap9.dao"
+	"com.ntc.lesson4.cap9.dao",
+	"com.ntc.lesson4.cap9.bean"
 })
 public class Cap9MainConfig {
 	
