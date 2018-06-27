@@ -12,6 +12,11 @@
 			<artifactId>spring-context</artifactId>
 			<version>5.0.6.RELEASE</version>
 		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-aspects</artifactId>
+		    <version>5.0.6.RELEASE</version>
+		</dependency>
 		 <dependency>    
             <groupId>javax.annotation</groupId>    
             <artifactId>jsr250-api</artifactId>    
@@ -29,5 +34,6 @@
 		    <artifactId>javax.inject</artifactId>
 		    <version>1</version>
 		</dependency>
+		
 	</dependencies>
 </project>
