@@ -1,5 +1,8 @@
 package com.ntc.lesson5.cap10.aop;
 
+import java.util.Arrays;
+
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -23,8 +26,8 @@ public class LogAspects {
 	// @Before代表在目标方法执行前切入，并制定在哪个方法前切入
 //	@Before("execution(public int com.ntc.lesson5.cap10.aop.Calculator.div(int,int))")
 	@Before("pointCut()")	//将上面的表达式抽出(解耦)
-	public void logStart(){
-		System.out.println("log切面...logStart...参数列表是:{}");
+	public void logStart(JoinPoint joinPoint){
+		System.out.println(joinPoint.getSignature().getName() + " log切面...logStart...参数列表是:{ "+ Arrays.asList(joinPoint.getArgs())+" }");
 	}
 	
 	@After("pointCut()")
@@ -32,14 +35,14 @@ public class LogAspects {
 		System.out.println("log切面...logEnd...");
 	}
 	
-	@AfterReturning("pointCut()")
-	public void logReturn(){
-		System.out.println("log切面...logReturn...运行结果是:{}");
+	@AfterReturning(value = "pointCut()", returning = "result")
+	public void logReturn(Object result){
+		System.out.println("log切面...logReturn...运行结果是:{"+ result +"}");
 	}
 	
-	@AfterThrowing("pointCut()")
-	public void logException(){
-		System.out.println("log切面...logException...异常信息是:{}");
+	@AfterThrowing(value = "pointCut()", throwing = "exception")
+	public void logException(Exception exception){
+		System.out.println("log切面...logException...异常信息是:{" + exception +"}");
 	}
 	
 	@Around("pointCut()")
