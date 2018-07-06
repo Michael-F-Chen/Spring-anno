@@ -14,8 +14,8 @@ public class Cap11Test {
  		AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(Cap11MainConfig.class);
 			
  		OrderService bean = app.getBean(OrderService.class);
-  		bean.addOrder();
+   		bean.addOrder();
  		
-		app.close();
+                          		app.close();
 	}
 }

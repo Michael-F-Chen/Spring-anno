@@ -13,12 +13,11 @@ import org.springframework.context.annotation.FilterType;
  */
 @Configuration
 @ComponentScan(value="com.ntc.lesson1.cap2", includeFilters= {
-			
+			// 按指定注解过滤
 //			@Filter(type=FilterType.ANNOTATION, classes=(Controller.class))
-
-			// 自定义过滤
-//			@Filter(type=FilterType.ANNOTATION, classes=(OrderController.class))
-			
+			// 按指定类型过滤
+//			@Filter(type=FilterType.ASSIGNABLE_TYPE, classes=(OrderController.class))
+			// 自定义过滤 NtcTypeFilter实现TypeFilter
 			@Filter(type=FilterType.CUSTOM, classes=(NtcTypeFilter.class))
 },
 // useDefaultFilters=true 会默认扫描所有@Component注解

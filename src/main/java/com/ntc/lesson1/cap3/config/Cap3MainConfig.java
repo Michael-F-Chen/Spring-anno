@@ -9,13 +9,13 @@ import com.ntc.lesson1.cap1.Person;
 @Configuration
 public class Cap3MainConfig {
 	/*
-	 * prototype: ¶àÊµÀý£ºIOCÈÝÆ÷Æô¶¯²¢²»»áÈ¥µ÷ÓÃ·½·¨´´½¨¶ÔÏó·ÅÔÚÈÝÆ÷ÖÐ£¬¶øÊÇÃ¿´Î»ñÈ¡µÄÊ±ºò²Å»áµ÷ÓÃ·½·¨´´½¨¶ÔÏó,¼ûtest02
-	 * singleton: µ¥ÊµÀý£¨Ä¬ÈÏ£©£ºIOCÈÝÆ÷Æô¶¯»áµ÷ÓÃ·½·¨´´½¨¶ÔÏó·Åµ½IOCÈÝÆ÷ÖÐ£¬ÒÔºóÃ¿½»»ñÈ¡¾ÍÊÇÖ±½Ó´ÓÈÝÆ÷£¨Àí½â³É´Ómap.get¶ÔÏó£©ÖÐÄÃ 
-	 * request:  Ö÷ÒªÕë¶ÔWEBÓ¦ÓÃ£¬Í¬Ò»´ÎÇëÇó´´½¨Ò»¸öÊµÀý
-	 * session:  Í¬Ò»¸ösession´´½¨Ò»¸öÊµÀý£¨ºóÃæÁ½¸öÓÃµÃ²»¶à£¬ÁË½â¼´¿É£©
+	 * prototype: å¤šå®žä¾‹ï¼šIOCå®¹å™¨å¯åŠ¨å¹¶ä¸ä¼šåŽ»è°ƒç”¨æ–¹æ³•åˆ›å»ºå¯¹è±¡æ”¾åœ¨å®¹å™¨ä¸­ï¼Œè€Œæ˜¯æ¯æ¬¡èŽ·å–çš„æ—¶å€™æ‰ä¼šè°ƒç”¨æ–¹æ³•åˆ›å»ºå¯¹è±¡,è§test02
+	 * singleton: å•å®žä¾‹ï¼ˆé»˜è®¤ï¼‰ï¼šIOCå®¹å™¨å¯åŠ¨ä¼šè°ƒç”¨æ–¹æ³•åˆ›å»ºå¯¹è±¡æ”¾åˆ°IOCå®¹å™¨ä¸­ï¼Œä»¥åŽæ¯äº¤èŽ·å–å°±æ˜¯ç›´æŽ¥ä»Žå®¹å™¨ï¼ˆç†è§£æˆä»Žmap.getå¯¹è±¡ï¼‰ä¸­æ‹¿ 
+	 * request:  ä¸»è¦é’ˆå¯¹WEBåº”ç”¨ï¼ŒåŒä¸€æ¬¡è¯·æ±‚åˆ›å»ºä¸€ä¸ªå®žä¾‹
+	 * session:  åŒä¸€ä¸ªsessionåˆ›å»ºä¸€ä¸ªå®žä¾‹ï¼ˆåŽé¢ä¸¤ä¸ªç”¨å¾—ä¸å¤šï¼Œäº†è§£å³å¯ï¼‰
 	 */
 	
-	// ¶àÊµÀý
+	// å¤šå®žä¾‹
 	@Scope("prototype")
 //	@Lazy
 	@Bean
