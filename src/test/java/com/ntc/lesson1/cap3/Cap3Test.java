@@ -14,16 +14,16 @@ public class Cap3Test {
 	
 		String[] names = app.getBeanDefinitionNames();
 		
-		System.out.println("==============´òÓ¡É¨Ãè³öÀ´µÄbean¿ªÊ¼=================");
+		System.out.println("==============æ‰“å°æ‰«æå‡ºæ¥çš„beanå¼€å§‹=================");
 		for(String name : names) {
 			System.out.println(name);
 		}
-		System.out.println("==============´òÓ¡É¨Ãè³öÀ´µÄbean½áÊø=================");
+		System.out.println("==============æ‰“å°æ‰«æå‡ºæ¥çš„beanç»“æŸ=================");
 		
-		// ´ÓÈİÆ÷ÖĞ·Ö±ğÈ¡Á½´Îbean
+		// ä»å®¹å™¨ä¸­åˆ†åˆ«å–ä¸¤æ¬¡bean
 		Object bean3 = app.getBean("person");
 		Object bean4 = app.getBean("person");
-		System.out.println("==============personÊÇ·ñÊÇµ¥ÊµÀı=================");
+		System.out.println("==============personæ˜¯å¦æ˜¯å•å®ä¾‹=================");
 		System.out.println(bean3 == bean4);
 	}
 }

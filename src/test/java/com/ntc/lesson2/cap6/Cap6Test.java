@@ -14,8 +14,8 @@ public class Cap6Test {
 		
 		System.out.println("IOC容器创建完成。。。。。");
 		
-//		Object bean1 = app.getBean("&ntcFactoryBean");
-		Object bean1 = app.getBean("ntcFactoryBean");
+		Object bean1 = app.getBean("&ntcFactoryBean");
+//		Object bean1 = app.getBean("ntcFactoryBean");
 		System.out.println("bean1的类型=" + bean1.getClass());
 		
 		String[] names = app.getBeanDefinitionNames();

@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- 模拟xml配置bean -->
-	<bean id="person" class="com.ntc.lesson1.cap1.Person">
+	<bean id="person" class="com.ntc.lesson1.cap1.Person" init-method="" destroy-method="">
 		<property name="name" value="ntc"></property>
 		<property name="age" value="27"></property>
 	</bean>
