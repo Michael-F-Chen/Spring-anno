@@ -17,7 +17,7 @@ public class TestService {
 	 * 并且不再执行@Bean，
 	 * 如果要执行指定的@Bean，需在@Autowired上使用@Qualifier指明bean的name
 	 */
-//	@Qualifier("testDao2")
+//	@Qualifier("testDao")
 //	@Autowired(required = false)
 	
 	/*
