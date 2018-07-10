@@ -17,6 +17,9 @@ import org.aspectj.lang.annotation.Pointcut;
 public class LogAspects {
 	
 	// 将切入表达式抽出(解耦)
+	// 抽取公共切入点表达式
+	// 1,如果实在此类中应用，只要@Before("pointCut()")
+	// 2,如果是在其他的切面类，需要引用
 	@Pointcut("execution(public int com.ntc.lesson5.cap10.aop.Calculator.div(int,int))")
 	public void pointCut(){}
 		
@@ -30,7 +33,7 @@ public class LogAspects {
 		System.out.println(joinPoint.getSignature().getName() + " log切面...logStart...参数列表是:{ "+ Arrays.asList(joinPoint.getArgs())+" }");
 	}
 	
-	@After("pointCut()")
+	@After("com.ntc.lesson5.cap10.aop.pointCut()")
 	public void logEnd(){
 		System.out.println("log切面...logEnd...");
 	}
