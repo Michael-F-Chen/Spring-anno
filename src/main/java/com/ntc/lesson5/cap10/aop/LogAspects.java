@@ -33,7 +33,7 @@ public class LogAspects {
 		System.out.println(joinPoint.getSignature().getName() + " log切面...logStart...参数列表是:{ "+ Arrays.asList(joinPoint.getArgs())+" }");
 	}
 	
-	@After("com.ntc.lesson5.cap10.aop.pointCut()")
+	@After("com.ntc.lesson5.cap10.aop.LogAspects.pointCut()")
 	public void logEnd(){
 		System.out.println("log切面...logEnd...");
 	}
@@ -51,7 +51,7 @@ public class LogAspects {
 	@Around("pointCut()")
 	public Object Around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
 		System.out.println("log切面...@Around:执行目标方法之前");
-		Object proceed = proceedingJoinPoint.proceed();
+		Object proceed = proceedingJoinPoint.proceed();// 手动启动业务方法
 		System.out.println("log切面...@Around:执行目标方法之后");
 		return proceed;		
 	}
